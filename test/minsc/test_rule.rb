@@ -1,7 +1,7 @@
 require_relative "../../lib/minsc/rule"
 require "minitest/autorun"
 
-class SampleRule
+class FooBarRule
   include Minsc::Rule
 
   condition :is_foo?
@@ -24,16 +24,16 @@ end
 
 class TestRule < Minitest::Test
   def test_applicable?
-    rule = SampleRule.new("foo", "bar")
-    assert_equal rule.applicable?, true
+    rule1 = FooBarRule.new("foo", "bar")
+    assert rule1.applicable?
 
-    rule2 = SampleRule.new("fizz", "buzz")
-    assert_equal rule2.applicable?, false
+    rule2 = FooBarRule.new("fizz", "buzz")
+    refute rule2.applicable?
 
-    rule3 = SampleRule.new("fizz", "bar")
-    assert_equal rule3.applicable?, false
+    rule3 = FooBarRule.new("fizz", "bar")
+    refute rule3.applicable?
 
-    rule4 = SampleRule.new("foo", "buzz")
-    assert_equal rule4.applicable?, false
+    rule4 = FooBarRule.new("foo", "buzz")
+    refute rule4.applicable?
   end
 end
