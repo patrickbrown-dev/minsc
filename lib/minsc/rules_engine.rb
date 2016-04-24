@@ -1,0 +1,2 @@
+module Minsc::RulesEngine
+end

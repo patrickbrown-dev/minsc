@@ -1,0 +1,19 @@
+PATH
+  remote: .
+  specs:
+    minsc (0.0.0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    minitest (5.8.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  minitest (~> 5.8, >= 5.8.4)
+  minsc!
+
+BUNDLED WITH
+   1.11.2
