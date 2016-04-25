@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "minsc"
-  s.version     = "0.0.0"
+  s.version     = "0.1.0"
   s.date        = "2016-04-23"
   s.summary     =
     "You have curried the favor of Boo, the only miniature giant space hamster in the Realm!"

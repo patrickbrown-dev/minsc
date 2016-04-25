@@ -16,7 +16,7 @@ button and rain beatings liberally down on the wizard for playing such a trick!"
 Add this line to your ~Gemfile~.
 
 #+BEGIN_SRC ruby
-gem "minsc", "~> 0.0.0"
+gem "minsc", "~> 0.1.0"
 #+END_SRC
 
 ** Usage
