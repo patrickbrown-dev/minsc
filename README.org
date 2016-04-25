@@ -1,6 +1,4 @@
-* Minsc
-
-[[file:https://circleci.com/gh/ptrckbrwn/minsc][https://circleci.com/gh/ptrckbrwn/minsc.svg?style=svg]]
+* Minsc [[file:https://circleci.com/gh/ptrckbrwn/minsc][https://circleci.com/gh/ptrckbrwn/minsc.svg?style=svg]]
 
 An ultra-lightweight Rules Engine.
 
@@ -11,6 +9,14 @@ An ultra-lightweight Rules Engine.
 This is silly! Buttons are not how one escapes dungeons! I would smash the button
 and rain beatings liberally down on the wizard for playing such a trick!
 #+END_QUOTE
+
+** Installation
+
+Add this line to your ~Gemfile~.
+
+#+BEGIN_SRC ruby
+gem "minsc", "~> 0.0.0"
+#+END_SRC
 
 ** Usage
 
