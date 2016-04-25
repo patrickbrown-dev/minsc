@@ -1,13 +1,14 @@
-* Minsc [[file:https://circleci.com/gh/ptrckbrwn/minsc][https://circleci.com/gh/ptrckbrwn/minsc.svg?style=svg]]
+* Minsc [[file:https://circleci.com/gh/ptrckbrwn/minsc][https://circleci.com/gh/ptrckbrwn/minsc.svg?style=svg]] [[https://rubygems.org/gems/minsc][file:https://badge.fury.io/rb/minsc.svg]]
 
 An ultra-lightweight Rules Engine.
 
-#+CAPTION: Minsc and Boo from Baldur's Gate
+#+ATTR_HTML: :align right :alt Minsc and Boo from Baldur's Gate
 [[file:minsc.jpg]]
 
 #+BEGIN_QUOTE
-This is silly! Buttons are not how one escapes dungeons! I would smash the button
-and rain beatings liberally down on the wizard for playing such a trick!
+"This is silly! Buttons are not how one escapes dungeons! I would smash the
+button and rain beatings liberally down on the wizard for playing such a trick!"
+--- Minsc, /Baldur's Gate II: Shadows of Amn/
 #+END_QUOTE
 
 ** Installation
