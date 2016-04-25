@@ -1,4 +1,4 @@
 * Minsc
 
-#+ATTR_HTML: align: right
-[[minsc.jpg]]
+#+ATTR_HTML: :alt Minsc :align right
+[[file:minsc.jpg]]
