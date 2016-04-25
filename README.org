@@ -1,0 +1,4 @@
+* Minsc
+
+#+ATTR_HTML: align: right
+[[minsc.jpg]]
