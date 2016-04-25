@@ -1,4 +1,70 @@
 * Minsc
 
-#+ATTR_HTML: :alt Minsc :align right
+An ultra-lightweight Rules Engine.
+
+#+CAPTION: Minsc and Boo from Baldur's Gate
 [[file:minsc.jpg]]
+
+#+BEGIN_QUOTE
+This is silly! Buttons are not how one escapes dungeons! I would smash the button
+and rain beatings liberally down on the wizard for playing such a trick!
+#+END_QUOTE
+
+** Usage
+
+#+BEGIN_SRC ruby
+class AttackRule
+  include Minsc::Rule
+
+  condition :is_near_an_enemy?
+
+  def initialize(character)
+    @character = character
+  end
+
+  def execute
+    @characeter.attack(@character.enemies.first)
+  end
+
+  private
+
+  def is_near_an_enemy?
+    @characeter.enemies.count > 0
+  end
+end
+
+class RageRule
+  include Minsc::Rule
+
+  condition :is_hp_below_25?
+  condition :is_near_an_enemy?
+
+  def initialize(character)
+    @character = character
+  end
+
+  def execute
+    @character.rage!
+  end
+
+  private
+
+  def is_hp_below_25?
+    @character.hp < 25
+  end
+
+  def is_near_an_enemy?
+    @characeter.enemies.count > 0
+  end
+end
+
+class BarbarianRulesEngine
+  include Minsc::RulesEngine
+
+  rule AttackRule
+  rule RageRule
+end
+
+barbarian = Character.new
+BarbarianRulesEngine.exectue(barbarian)
+#+END_SRC
