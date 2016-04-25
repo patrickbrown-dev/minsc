@@ -1,5 +1,7 @@
 * Minsc
 
+[[file:https://circleci.com/gh/ptrckbrwn/minsc][https://circleci.com/gh/ptrckbrwn/minsc.svg?style=svg]]
+
 An ultra-lightweight Rules Engine.
 
 #+CAPTION: Minsc and Boo from Baldur's Gate
