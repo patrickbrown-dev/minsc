@@ -1,4 +1,4 @@
-require_relative "../../lib/minsc/rule"
+require "minsc"
 require "minitest/autorun"
 
 class FooBarRule
