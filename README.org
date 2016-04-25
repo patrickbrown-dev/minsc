@@ -27,7 +27,7 @@ class AttackRule
   end
 
   def execute
-    @character.attack(@character.enemies.first)
+    @character.attack!(@character.enemies.first)
   end
 
   private
@@ -79,8 +79,9 @@ Finally, execute the ~RulesEngine~ on some state. The ~RulesEngine~ will perform
 
 #+BEGIN_SRC ruby
 barbarian = Character.new("Minsc")
-BarbarianRulesEngine.exectue(barbarian)
-# If near an enemy and has less than 25 health, Minsc will /rage/.
-# If near an enemy Minsc will /attack/.
-# If not near an enemy, Minsc will do nothing.
+BarbarianRulesEngine.execute(barbarian)
+# If near an enemy and has less than 25 health, Minsc will #rage!.
+# If near an enemy Minsc will #attack!.
+# If near an enemy and has less than 25 health, Minsc will #rage! and #attack!
+# If not near an enemy, Minsc will do nothing (perhaps pet Boo).
 #+END_SRC
