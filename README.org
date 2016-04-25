@@ -12,6 +12,8 @@ and rain beatings liberally down on the wizard for playing such a trick!
 
 ** Usage
 
+First, define some rules.
+
 #+BEGIN_SRC ruby
 class AttackRule
   include Minsc::Rule
@@ -23,13 +25,13 @@ class AttackRule
   end
 
   def execute
-    @characeter.attack(@character.enemies.first)
+    @character.attack(@character.enemies.first)
   end
 
   private
 
   def is_near_an_enemy?
-    @characeter.enemies.count > 0
+    @character.enemies.count > 0
   end
 end
 
@@ -54,17 +56,29 @@ class RageRule
   end
 
   def is_near_an_enemy?
-    @characeter.enemies.count > 0
+    @character.enemies.count > 0
   end
 end
+#+END_SRC
 
+Then assign the rules to a ~RulesEngine~.
+
+#+BEGIN_SRC ruby
 class BarbarianRulesEngine
   include Minsc::RulesEngine
 
-  rule AttackRule
   rule RageRule
+  rule AttackRule
 end
+#+END_SRC
 
-barbarian = Character.new
+Finally, execute the ~RulesEngine~ on some state. The ~RulesEngine~ will perform
+/all/ actions it meets the criteria for.
+
+#+BEGIN_SRC ruby
+barbarian = Character.new("Minsc")
 BarbarianRulesEngine.exectue(barbarian)
+# If near an enemy and has less than 25 health, Minsc will /rage/.
+# If near an enemy Minsc will /attack/.
+# If not near an enemy, Minsc will do nothing.
 #+END_SRC
