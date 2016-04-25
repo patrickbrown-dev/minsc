@@ -2,7 +2,7 @@ module Minsc
   module Rule
     @registry = {}
 
-    def self.add_rule(klass, method)
+    def self.add_condition(klass, method)
        @registry[klass] ||= []
        @registry[klass] << method
     end
@@ -13,7 +13,7 @@ module Minsc
 
     module ClassMethods
       def condition(method)
-        Rule.add_rule(self, method)
+        Rule.add_condition(self, method)
       end
     end
 
