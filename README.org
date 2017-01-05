@@ -1,4 +1,4 @@
-* Minsc [[https://travis-ci.org/ptrckbrwn/minsc][https://travis-ci.org/ptrckbrwn/minsc.svg]] [[https://rubygems.org/gems/minsc][file:https://badge.fury.io/rb/minsc.svg]]
+* Minsc [[https://travis-ci.org/xkpb/minsc][https://travis-ci.org/xkpb/minsc.svg]] [[https://rubygems.org/gems/minsc][file:https://badge.fury.io/rb/minsc.svg]]
 
 An ultra-lightweight Rules Engine.
 
